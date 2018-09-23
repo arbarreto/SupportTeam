@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suppot Team</title>
+	<link rel="stylesheet" type="text/css" href="../../lib/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../lib/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script type="text/javascript" src="../../lib/js/jquery.js"></script>
+	<script type="text/javascript" src="../../lib/js/jquery.mask.js"></script>
+	<script type="text/javascript" src="../../lib/js/style.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="containerLogin">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="containerLogo">
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<br>
+						<form action="#">
+							<div class="form-group cadastrarCpf">
+								<input type="text" class="form-control" id="cpf" placeholder="CPF">
+								<small class="cpfInvalido ml-15 error"> CPF inválido, tente novamente.</small>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="nomeCompleto" placeholder="Nome completo">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="senha" placeholder="Senha">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="confirmSenha" placeholder="Confirmar senha">
+								<small class="senhaInvalida ml-15 error">As senhas não coincidem, tente novamente.</small>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" id="email" placeholder="E-mail">
+							</div>
+							<div class="row">
+								<div class="col-md-10">
+									<div class="form-group">
+										<input type="text" class="form-control" id="cep" placeholder="CEP">
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<button type="button" class="btn btn-primary">
+											<i class="fas fa-search"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-10">
+									<div class="form-group">
+										<input type="text" class="form-control" disabled="disabled" id="logradouro" placeholder="Logradouro">
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<input type="text" class="form-control numero" id="numero" placeholder="Nº">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8">
+									<div class="form-group">
+										<input type="text" class="form-control" disabled="disabled" id="cidade" placeholder="Cidade">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<input type="text" class="form-control numero" disabled="disabled" id="estado" placeholder="Estado">
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary entrar">Cadastrar</button>
+							<div class="cadastre-se mt-15">
+								Já tem cadastro? <a href="loginScreen.html">Clique aqui</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
