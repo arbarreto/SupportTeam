@@ -135,3 +135,9 @@ a:hover {
 .numero {
 	margin-left: -15px;
 }
+
+.telaSistema {
+    width: 260px;
+    display: block;
+    margin: 10px auto;
+}
