@@ -141,3 +141,75 @@ a:hover {
     display: block;
     margin: 10px auto;
 }
+
+.topo-sistema {
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+
+.logo-topo {
+    color: #b8ac7f;
+    font-size: 22px;
+    padding-top: 13px;
+}
+
+.nome-topo {
+    color: #fff;
+    padding-top: 13px;
+    float: right;
+}
+
+.img-circulo {
+    border: 1px solid #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    float: right;
+    margin-top: 10px;
+}
+
+.imagem-perfil {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    padding: 3px;
+}	
+
+.nome-usuario {
+    font-size: 12px;
+    margin-top: 12px;
+    margin-left: -15px;
+}
+
+.separador {
+    width: 100%;
+    border-top: 1px solid #e6e4e4;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.icon-menu {
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.icon-menu {
+    margin-right: 10px;
+}
+
+.sair {
+    margin-left: -15px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.lateral {
+    min-height: 100vh;
+    border-right: 1px solid #e6e4e4;
+}
+
+.titulo-abrir {
+    padding: 10px;
+    font-size: 20px;
+}
