@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suppot Team</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../lib/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../../lib/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script type="text/javascript" src="../../lib/js/jquery.js"></script>
+	<script type="text/javascript" src="../../lib/js/jquery.mask.js"></script>
+	<script type="text/javascript" src="../../lib/js/style.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="topo-sistema">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<div class="logo-topo">
+							Support Team
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-4 col-xs-4 lateral">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<div class="img-circulo">
+						<img src="../image/girl.png" class="imagem-perfil">
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-6 col-xs-6">
+					<div class="nome-usuario">
+						Bem vinda(o), Amanda Rafaela Barreto de Melo
+					</div>
+					<div class="sair">
+						<a href="login.html"> Sair <i class="fas fa-sign-out-alt"></i></a>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<a href="#" class="icon-menu"><i class="fas fa-pencil-alt icon-menu"></i> Editar perfil</a>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="separador"></div>
+			</div>
+			<br>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<a href="chamados" class="icon-menu"><i class="far fa-file-alt icon-menu"></i> Chamados</a>
+			</div>
+			<br>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<a href="novo_chamado.html" class="icon-menu"><i class="fas fa-plus-circle icon-menu"></i> Abrir chamado</a>
+			</div>
+		</div>
+		<div class="col-md-9 col-sm-8 col-xs-8">
+			<div class="titulo-abrir">
+				Chamados
+			</div>
+			<div class="row right">
+				<div class="col-md-6">
+					<form action="#" class="formpesquisa">
+						<input type="text" name="busca" class="form-control" id="busca" placeholder="Pesquisar">
+						<button type="submit" class="btn btn-primary btnbuscar right">Buscar</button>
+					</form>
+					<i class="fas fa-filter right filto"></i>
+				</div>
+			</div>
+			<br/><br/>
+			<table class="table table-striped ">
+				<thead class="thead-dark">
+					<tr>
+					    <th scope="col">Chamado</th>
+					    <th scope="col">Equipamento</th>
+					    <th scope="col">Data de abertura</th>
+					    <th scope="col">Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					    <th scope="row">876543</th>
+					    <td>Notebook</td>
+					    <td>17/06/2018</td>
+					    <td>
+					    	<div class="col-md-3 left">
+					    		<div class="status_ativo"></div>
+					    	</div>
+					    	<div class="col-md-3 left">
+					    		<i class="fas fa-eye"></i>
+					    	</div>
+					    	<div class="col-md-3 left">
+					    		<i class="fas fa-pencil-alt"></i>
+					    	</div>
+					    </td>
+					</tr>
+					<tr>
+					    <th scope="row">765432</th>
+					    <td>Computador</td>
+					    <td>05/06/2018</td>
+					    <td>
+					    	<div class="col-md-3 left">
+					    		<div class="status_atendimento"></div>
+					    	</div>
+					    	<div class="col-md-3 left">
+					    		<i class="fas fa-eye"></i>
+					    	</div>
+					    </td>
+					</tr>
+					<tr>
+					    <th scope="row">654321</th>
+					    <td>Tablet</td>
+					    <td>31/05/2018</td>
+					    <td>
+					    	<div class="col-md-3 left">
+					    		<div class="status_fechado"></div>
+					    	</div>
+					    	<div class="col-md-3 left">
+					    		<i class="fas fa-eye"></i>
+					    	</div>
+					    </td>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+			<div class="row">
+				<div class="col-md-2 right">
+					<div class="status_ativo left"></div><p>Em aberto<p>
+				</div>
+				<div class="col-md-3 right">
+					<div class="status_atendimento left"></div><p>Em atendimento<p>
+				</div>
+				<div class="col-md-2 right">
+					<div class="status_fechado left"></div><p>Fechado<p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 right">
+					<p class="legenda">Somente chamados "Em aberto" poderão ser alterados ou cancelados</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
