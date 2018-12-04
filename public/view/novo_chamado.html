@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suppot Team</title>
+	<meta charset="UTF-8"></meta>
+	<link rel="stylesheet" type="text/css" href="../../lib/css/bootstrap.css"></link>
+	<link rel="stylesheet" type="text/css" href="../../lib/css/style.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet"></link>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"></link>
+	<link rel="stylesheet" href="../../lib/css/jquery-confirm.css"></link>
+	<script type="text/javascript" src="../../lib/js/jquery.js"></script>
+	<script src="../../lib/js/jquery-confirm.js"></script>
+	<script type="text/javascript" src="../../lib/js/jquery.mask.js"></script>
+	<script type="text/javascript" src="../../lib/js/style.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="topo-sistema">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-6">
+						<div class="logo-topo">
+							Support Team
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-4 col-xs-4 lateral">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<div class="img-circulo">
+						<img src="../image/girl.png" class="imagem-perfil"></img>
+					</div>
+				</div>
+				<div class="col-md-8 col-sm-6 col-xs-6">
+					<div class="nome-usuario">
+						Bem vinda(o), Amanda Rafaela Barreto de Melo
+					</div>
+					<form action="loginScreen" method="GET">
+						<div class="sair">
+							<a href="loginScreen"> Sair <i class="fas fa-sign-out-alt"></i></a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<br/>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<a href="#" class="icon-menu"><i class="fas fa-pencil-alt icon-menu"></i> Editar perfil</a>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="separador"></div>
+			</div>
+			<br/>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<a href="chamados" class="icon-menu"><i class="far fa-file-alt icon-menu"></i> Chamados</a>
+			</div>
+			<br/>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<a href="novo_chamado.html" class="icon-menu"><i class="fas fa-plus-circle icon-menu"></i> Abrir chamado</a>
+			</div>
+		</div>
+		<div class="col-md-9 col-sm-8 col-xs-8">
+			<div class="titulo-abrir">
+				Abrir chamado
+			</div>
+			<form action="#" class="formchamado">
+				<label>Código do equiapemnto (*)</label><br/>
+				<input type="text" name="codigo_equipamento" id="codigo_equipamento" class="form-control" disabled="disabled"></input><br/>
+				<label>Descrição detalhada (*)</label><br/>
+				<textarea class="form-control" rows="5" name="descricao_detalhada" id="descricao_detalhada"></textarea><br/>
+				<label>Arquivos</label><br/>
+				<input type="file" name="arquivo" class="form-control" id="arquivo"></input><br/>
+				<label>Equipamento (*)</label><br/>
+				<select class="form-control" name="equipamento">
+					<option value="0">Computador</option>
+					<option value="1">Tablet</option>
+					<option value="2">Notebook</option>
+				</select><br/>
+				<a href="chamados.html" class="btn btn-primary">Cancelar</a>
+				<button type="submit" class="btn btn-primary">Abrir chamado</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+	   	$.confirm({
+		    title: 'Valide se o equipamento está na garantia!',
+		    content: '' +
+		    '<form action="" class="formGarantia">' +
+		    '<div class="form-group">' +
+		    '<label>Digite o código do equipamento</label>' +
+		    '<input type="text" placeholder="Código" class="codigo form-control" required="required"></input>' +
+		    '</div>' +
+		    '</form>',
+		    buttons: {
+		        formSubmit: {
+		            text: 'Verificar',
+		            btnClass: 'btn-blue',
+		            action: function () {
+		                var codigo = this.$content.find('.codigo').val();
+		                if(!codigo){
+		                    $.alert('Digite o código de veirificação.');
+		                    return false;
+		                }
+
+		                $.ajax({
+						  type: "POST",
+						  //url: Controller que é pra verificar se está disponível,
+						  data: codigo,
+						  
+						  success(response) {
+						  	if (response.status == false) {
+						  		$.alert('Equipamento não está na garantia.');
+						  	} else {
+						  		return false;
+						  	}
+						  }
+						});
+		            }
+		        },
+		        cancelar: {
+		        	text: 'Cancelar',
+		        	cancel: function () {
+			            //close
+			        },
+		        }
+		    }
+		});
+   	});
+</script>
+</html>

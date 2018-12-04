@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Suppot Team</title>
+	<link rel="stylesheet" type="text/css" href="../../lib/css/bootstrap.css"></link>
+	<link rel="stylesheet" type="text/css" href="../../lib/css/style.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet"></link>
+	<script type="text/javascript" src="../../lib/js/jquery.js"></script>
+	<script type="text/javascript" src="../../lib/js/jquery.mask.js"></script>
+	<script type="text/javascript" src="../../lib/js/style.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="containerLogin">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="containerLogo">
+							<img src="../image/logo.jpeg" class="logo"></img>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="logarS">
+							<button type="button" class="btn btn-primary ml-15 mt-15 logar active">Logar no sistema</button>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="pesquisarChamado">
+							<button type="button" class="btn btn-primary ml-15 mt-15 pesquisarChamado">Pesquisar chamado</button>
+						</div>
+					</div>
+				</div>
+				<div class="row logarSistema">
+					<div class="col-md-12">
+						<br/>
+						<form action="login" method="post">
+							<div class="form-group logarCpf">
+								<input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF"></input>
+							</div>
+							<div class="form-group logarSenha">
+								<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha"></input>
+							</div>
+							<button type="submit" class="btn btn-primary entrar">Entrar</button>
+							<div class="cadastre-se mt-15">
+								Não tem cadastro? <a href="createScreen">Clique aqui</a>
+							</div>
+							<p th:text="${mensagem}" />
+						</form>
+					</div>
+				</div>
+				<div class="row pesquisar">
+					<div class="col-md-12">
+						<br/>
+						<form action="login" method="post">
+							<div class="form-group logarCpf">
+								<input type="text" class="form-control" id="numero_chamado" placeholder="Número do chamado"></input>
+							</div>
+							<button type="submit" class="btn btn-primary entrar">Pesquisar</button>
+							<div class="cadastre-se mt-15">
+								Não tem cadastro? <a href="createScreen">Clique aqui</a>
+							</div>
+							<p th:text="${mensagem}" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
